@@ -4,6 +4,12 @@ Generates and parses [BSON UUIDs](https://docs.mongodb.com/manual/reference/meth
 
 Inspired by [@srcagency's](https://github.com/srcagency) [mongo-uuid](https://github.com/srcagency/mongo-uuid)
 
+## Install
+
+```shell
+npm install uuid-mongodb
+```
+
 ## Usage
 
 ```javascript
