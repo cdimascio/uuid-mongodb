@@ -6,7 +6,7 @@ Inspired by [@srcagency's](https://github.com/srcagency) [mongo-uuid](https://gi
 
 ## Usage
 
-```
+```javascript
 # Create a v1 binary UUID
 const mUUID1 = MUUID.v1();
 
