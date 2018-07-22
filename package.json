@@ -1,0 +1,29 @@
+{
+  "name": "uuid-mongodb",
+  "version": "0.8.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdimascio/uuid-mongodb.git"
+  },
+  "keywords": [
+    "uuid",
+    "mongodb"
+  ],
+  "author": "Carmine DiMascio <cdimascio@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cdimascio/uuid-mongodb/issues"
+  },
+  "homepage": "https://github.com/cdimascio/uuid-mongodb#readme",
+  "dependencies": {
+    "uuid": "^3.3.2"
+  },
+  "peerDependencies": {
+    "mongodb": "^3.1.1"
+  }
+}
