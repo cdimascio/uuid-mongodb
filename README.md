@@ -28,7 +28,7 @@ const mUUID2 = MUUID.from('393967e0-8de1-11e8-9eb6-529269fb1459')
 
 ## Notes
 
-Currently support UUID v1 and v4
+Currently supports UUID v1 and v4
 
 ## License
 
