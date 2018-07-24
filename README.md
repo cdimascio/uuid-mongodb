@@ -32,4 +32,4 @@ Currently supports UUID v1 and v4
 
 ## License
 
-MIT
+[MIT](./LICENSE)
