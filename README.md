@@ -1,6 +1,6 @@
 # uuid-mongodb
 
-Generates and parses [BSON UUIDs](https://docs.mongodb.com/manual/reference/method/UUID/) for use with MongoDB.
+Generates and parses [BSON UUIDs](https://docs.mongodb.com/manual/reference/method/UUID/) for use with MongoDB. BSON UUIDs provide better performance than their string counterparts.
 
 Inspired by [@srcagency's](https://github.com/srcagency) [mongo-uuid](https://github.com/srcagency/mongo-uuid)
 
@@ -29,8 +29,8 @@ const mUUID2 = MUUID.from(/** MongoDb Binary of SUBTYPE_UUID */)
 
 ## Notes
 
-Currently support UUID v1 and v4
+Currently supports UUID v1 and v4
 
 ## License
 
-MIT
+[MIT](./LICENSE)
