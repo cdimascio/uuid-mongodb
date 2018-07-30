@@ -29,7 +29,8 @@ mUUID1.toString()
 # Create a binary UUID from a valid uuid string
 const mUUID2 = MUUID.from('393967e0-8de1-11e8-9eb6-529269fb1459')
 
-# Create a binary UUID from a MongoDb Binary (when you want to view it as a string e.g. mUUID3.toString())
+# Create a binary UUID from a MongoDb Binary 
+# This is useful to get MUUIDs helpful toString() method
 const mUUID3 = MUUID.from(/** MongoDb Binary of SUBTYPE_UUID */)
 ```
 
