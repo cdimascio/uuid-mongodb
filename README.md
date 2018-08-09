@@ -2,6 +2,10 @@
 
 Generates and parses [BSON UUIDs](https://docs.mongodb.com/manual/reference/method/UUID/) for use with MongoDB. BSON UUIDs provide better performance than their string counterparts.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/cdimascio/uuid-mongodb/master/assets/uuid-mongodb.png?raw=truef"/>
+</p>
+
 Inspired by [@srcagency's](https://github.com/srcagency) [mongo-uuid](https://github.com/srcagency/mongo-uuid)
 
 ## Install
@@ -24,7 +28,24 @@ mUUID1.toString()
 
 # Create a binary UUID from a valid uuid string
 const mUUID2 = MUUID.from('393967e0-8de1-11e8-9eb6-529269fb1459')
-const mUUID2 = MUUID.from(/** MongoDb Binary of SUBTYPE_UUID */)
+
+# Create a binary UUID from a MongoDb Binary 
+# This is useful to get MUUIDs helpful toString() method
+const mUUID3 = MUUID.from(/** MongoDb Binary of SUBTYPE_UUID */)
+```
+
+## Example
+
+### Query
+
+```javascript
+    const uuid = MUUID.from('393967e0-8de1-11e8-9eb6-529269fb1459');
+    return collection
+      .then(c =>
+        c.findOne({
+          _id: uuid,
+        })
+      )
 ```
 
 ## Notes
