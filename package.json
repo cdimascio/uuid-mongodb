@@ -1,6 +1,6 @@
 {
   "name": "uuid-mongodb",
-  "version": "0.9.2",
+  "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
