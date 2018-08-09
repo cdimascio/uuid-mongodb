@@ -50,8 +50,11 @@ return collection.then(c =>
 ### Work with binary UUIDs returned in query results
 ```javascript
     return collection
-      .then(c => c.find().toArray())
-      .then(r => console.log(MUUID.from(r[0]._id).toString()))
+      .then(c => c.findOne({ _id: uuid }))
+      .then(doc => {
+          const uuid = MUUID.from(doc._id).toString()
+          // do stuff
+      })
 ```
 
 ## Notes
