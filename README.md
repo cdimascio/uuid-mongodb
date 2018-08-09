@@ -36,7 +36,7 @@ const mUUID3 = MUUID.from(/** MongoDb Binary of SUBTYPE_UUID */)
 
 ## Example
 
-### Query using binary UUIDs
+#### Query using binary UUIDs
 
 ```javascript
 const uuid = MUUID.from('393967e0-8de1-11e8-9eb6-529269fb1459');
@@ -47,7 +47,7 @@ return collection.then(c =>
 );
 ```
 
-### Work with binary UUIDs returned in query results
+##### Work with binary UUIDs returned in query results
 ```javascript
     return collection
       .then(c => c.findOne({ _id: uuid }))
