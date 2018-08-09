@@ -34,7 +34,7 @@ const mUUID2 = MUUID.from('393967e0-8de1-11e8-9eb6-529269fb1459')
 const mUUID3 = MUUID.from(/** MongoDb Binary of SUBTYPE_UUID */)
 ```
 
-## Example
+## Examples
 
 #### Query using binary UUIDs
 
