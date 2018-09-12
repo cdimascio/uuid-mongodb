@@ -17,6 +17,8 @@ npm install uuid-mongodb
 ## Usage
 
 ```javascript
+const MUUID = require('uuid-mongodb');
+
 # Create a v1 binary UUID
 const mUUID1 = MUUID.v1();
 
