@@ -1,5 +1,7 @@
 # uuid-mongodb
 
+![](https://img.shields.io/badge/status-stable-green.svg) ![](https://img.shields.io/badge/tests-passing-green.svg) ![](https://img.shields.io/badge/license-MIT-blue.svg)
+
 Generates and parses [BSON UUIDs](https://docs.mongodb.com/manual/reference/method/UUID/) for use with MongoDB. BSON UUIDs provide better performance than their string counterparts.
 
 <p align="center">
