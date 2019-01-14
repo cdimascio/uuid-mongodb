@@ -64,7 +64,7 @@ return collection
 
 ## Notes
 
-Currently supports UUID v1 and v4
+Currently supports [UUID v1 and v4](https://www.ietf.org/rfc/rfc4122.txt)
 
 ## License
 
