@@ -61,8 +61,8 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
     });
 
     it('should throw when converting an Binary non SUBTYPE_UUID', () => {
-      const binary = Binary('tests', Binary.SUBTYPE_USER_DEFINED);
-      assert.throws(() => MUUID.from(binary), 'Invalid uuid');
+      const binary = new Binary(uuidv1(null, Buffer.alloc(16)), Binary.SUBTYPE_USER_DEFINED);
+      assert.throws(() => MUUID.from(binary), /Unexpected UUID type\. UUID must be a string or a MongoDB Binary \(SUBTYPE_UUID\)\.$/);
     });
   });
 });
