@@ -50,7 +50,7 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
     });
 
     it('should convert uuid from mongo BSON binary', () => {
-      const mUUID = MUUID.from(Binary(uuidv1(), Binary.SUBTYPE_UUID));
+      const mUUID = MUUID.from(Binary(uuidv1(null, Buffer.alloc(16)), Binary.SUBTYPE_UUID));
       assert.equal(mUUID instanceof Binary, true);
       assert.equal(validate(mUUID.toString()), true);
     });
