@@ -55,6 +55,11 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
       assert.equal(validate(mUUID.toString()), true);
     });
 
+    it('should throw when attempting to store 36 byte string representation as UUID', () => {
+      const binary = new Binary(Buffer.from(uuidv1()), Binary.SUBTYPE_UUID);
+      assert.throws(() => MUUID.from(binary), /Invalid UUID\.$/);
+    });
+
     it('should throw when converting an Binary non SUBTYPE_UUID', () => {
       const binary = Binary('tests', Binary.SUBTYPE_USER_DEFINED);
       assert.throws(() => MUUID.from(binary), 'Invalid uuid');
