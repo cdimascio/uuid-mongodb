@@ -45,8 +45,8 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
     });
 
     it('should throw when converting an invalid uuid', () => {
-      assert.throws(() => MUUID.from('invalid-uuid'), 'Invalid uuid');
-      assert.throws(() => MUUID.from('802ac0f09b7311e89bb69baebe1aa0bf'), 'Invalid uuid');
+      assert.throws(() => MUUID.from('invalid-uuid'), /Invalid UUID\.$/);
+      assert.throws(() => MUUID.from('802ac0f09b7311e89bb69baebe1aa0bf'), /Invalid UUID\.$/);
     });
 
     it('should convert uuid from mongo BSON binary', () => {
