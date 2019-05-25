@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "test": "mocha test/**/*.js "
+    "test": "mocha test/**/*.js ",
+    "lint": "eslint lib/**/*.js",
+    "lint:fix": "eslint --fix lib/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,11 @@
     "mongodb": "^3.1.13"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "mocha": "^6.1.4",
-    "mongodb": "^3.1.13"
+    "mongodb": "^3.1.13",
+    "prettier": "1.17.1"
   }
 }
