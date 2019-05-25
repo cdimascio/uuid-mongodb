@@ -4,7 +4,7 @@ const uuidv4 = require('uuid/v4');
 const { Binary } = require('mongodb');
 const MUUID = require('../lib');
 
-const hasHexUpperCase = s => /[A-F]/.exec(s);
+const hasHexUpperCase = s => !!/[A-F]/.exec(s);
 
 describe('MUUID (accept and generate uuids according to spec - (see https://www.itu.int/rec/T-REC-X.667-201210-I/en)', function() {
   describe('v1()', () => {
@@ -13,7 +13,7 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
       assert.equal(validate(mUUID.toString()), true);
       // ensure generated uuids are always lowercase
       // as per spec - (see https://www.itu.int/rec/T-REC-X.667-201210-I/en)
-      assert.equal(hasHexUpperCase(mUUID.toString(), false));
+      assert.equal(hasHexUpperCase(mUUID.toString()), false);
     });
   });
 
@@ -23,7 +23,7 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
       assert.equal(validate(mUUID.toString()), true);
       // ensure generated uuids are always lowercase
       // as per spec - (see https://www.itu.int/rec/T-REC-X.667-201210-I/en)
-      assert.equal(hasHexUpperCase(mUUID.toString(), false));
+      assert.equal(hasHexUpperCase(mUUID.toString()), false);
     });
   });
 
@@ -35,7 +35,7 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
 
     it('should accept uuid\'s with capital letters, but return with lowercase', () => {
       const mUUID = MUUID.from(uuidv4().toUpperCase());
-      assert.equal(hasHexUpperCase(mUUID.toString(), false));
+      assert.equal(hasHexUpperCase(mUUID.toString()), false);
       assert.equal(validate(mUUID.toString()), true);
     });
 
@@ -45,18 +45,24 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
     });
 
     it('should throw when converting an invalid uuid', () => {
-      assert.throws(() => MUUID.from('invalid-uuid'), 'Invalid uuid');
-      assert.throws(() => MUUID.from('802ac0f09b7311e89bb69baebe1aa0bf'), 'Invalid uuid');
+      assert.throws(() => MUUID.from('invalid-uuid'), /Invalid UUID\.$/);
+      assert.throws(() => MUUID.from('802ac0f09b7311e89bb69baebe1aa0bf'), /Invalid UUID\.$/);
     });
 
     it('should convert uuid from mongo BSON binary', () => {
-      const mUUID = MUUID.from(Binary(uuidv1(), Binary.SUBTYPE_UUID));
+      const mUUID = MUUID.from(Binary(uuidv1(null, Buffer.alloc(16)), Binary.SUBTYPE_UUID));
+      assert.equal(mUUID instanceof Binary, true);
       assert.equal(validate(mUUID.toString()), true);
     });
 
+    it('should throw when attempting to store 36 byte string representation as UUID', () => {
+      const binary = new Binary(Buffer.from(uuidv1()), Binary.SUBTYPE_UUID);
+      assert.throws(() => MUUID.from(binary), /Invalid UUID\.$/);
+    });
+
     it('should throw when converting an Binary non SUBTYPE_UUID', () => {
-      const binary = Binary('tests', Binary.SUBTYPE_USER_DEFINED);
-      assert.throws(() => MUUID.from(binary), 'Invalid uuid');
+      const binary = new Binary(uuidv1(null, Buffer.alloc(16)), Binary.SUBTYPE_USER_DEFINED);
+      assert.throws(() => MUUID.from(binary), /Unexpected UUID type\. UUID must be a string or a MongoDB Binary \(SUBTYPE_UUID\)\.$/);
     });
   });
 });
