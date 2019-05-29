@@ -6,6 +6,17 @@
   "commit": false,
   "contributors": [
     {
+      "login": "cdimascio",
+      "name": "Carmine DiMascio",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4706618?v=4",
+      "profile": "https://github.com/cdimascio",
+      "contributions": [
+        "infra",
+        "docs"
+        "code"
+      ]
+    },
+    {
       "login": "Benjamin-Dobell",
       "name": "Benjamin Dobell",
       "avatar_url": "https://avatars1.githubusercontent.com/u/482276?v=4",
