@@ -73,7 +73,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
 <table>
- <tr><td align="center"><a href="https://glassechidna.com.au"><img src="https://avatars1.githubusercontent.com/u/4706618?v=4" width="100px;" alt="Carmine DiMascio"/><br /><sub><b>Carmine DiMascio</b></sub></a><br /><a href="https://github.com/cdimascio/uuid-mongodb/commits?author=Benjamin-Dobell" title="Code">💻</a></td><td align="center"><a href="https://glassechidna.com.au"><img src="https://avatars1.githubusercontent.com/u/482276?v=4" width="100px;" alt="Benjamin Dobell"/><br /><sub><b>Benjamin Dobell</b></sub></a><br /><a href="https://github.com/cdimascio/uuid-mongodb/commits?author=Benjamin-Dobell" title="Code">💻</a></td></tr></table>
+ <tr><td align="center"><a href="https://github.com/cdimascio"><img src="https://avatars1.githubusercontent.com/u/4706618?v=4" width="100px;" alt="Carmine DiMascio"/><br /><sub><b>Carmine DiMascio</b></sub></a><br /><a href="https://github.com/cdimascio/uuid-mongodb/commits?author=Carmine-DiMascio" title="Code">💻</a></td><td align="center"><a href="https://glassechidna.com.au"><img src="https://avatars1.githubusercontent.com/u/482276?v=4" width="100px;" alt="Benjamin Dobell"/><br /><sub><b>Benjamin Dobell</b></sub></a><br /><a href="https://github.com/cdimascio/uuid-mongodb/commits?author=Benjamin-Dobell" title="Code">💻</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
