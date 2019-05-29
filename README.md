@@ -1,6 +1,6 @@
 # uuid-mongodb
-
-![](https://travis-ci.org/cdimascio/uuid-mongodb.svg?branch=master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a42f61ffc97b4bcbbca184ab838092c8)](https://www.codacy.com/app/cdimascio/uuid-mongodb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cdimascio/uuid-mongodb&amp;utm_campaign=Badge_Grade) ![](https://img.shields.io/npm/v/uuid-mongodb.svg) ![](https://img.shields.io/npm/dm/uuid-mongodb.svg) ![](https://img.shields.io/badge/license-MIT-blue.svg)
+![](https://travis-ci.org/cdimascio/uuid-mongodb.svg?branch=master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a42f61ffc97b4bcbbca184ab838092c8)](https://www.codacy.com/app/cdimascio/uuid-mongodb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cdimascio/uuid-mongodb&amp;utm_campaign=Badge_Grade) ![](https://img.shields.io/npm/v/uuid-mongodb.svg) ![](https://img.shields.io/npm/dm/uuid-mongodb.svg) [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+ ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Generates and parses [BSON UUIDs](https://docs.mongodb.com/manual/reference/method/UUID/) for use with MongoDB. BSON UUIDs provide better performance than their string counterparts.
 
@@ -65,6 +65,19 @@ return collection
 ## Notes
 
 Currently supports [UUID v1 and v4](https://www.ietf.org/rfc/rfc4122.txt)
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+ <tr><td align="center"><a href="https://github.com/cdimascio"><img src="https://avatars1.githubusercontent.com/u/4706618?v=4" width="100px;" alt="Carmine DiMascio"/><br /><sub><b>Carmine DiMascio</b></sub></a><br /><a href="https://github.com/cdimascio/uuid-mongodb/commits?author=Carmine-DiMascio" title="Code">💻</a></td><td align="center"><a href="https://glassechidna.com.au"><img src="https://avatars1.githubusercontent.com/u/482276?v=4" width="100px;" alt="Benjamin Dobell"/><br /><sub><b>Benjamin Dobell</b></sub></a><br /><a href="https://github.com/cdimascio/uuid-mongodb/commits?author=Benjamin-Dobell" title="Code">💻</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 ## License
 
