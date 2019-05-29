@@ -1,7 +1,6 @@
 # uuid-mongodb
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-
-![](https://travis-ci.org/cdimascio/uuid-mongodb.svg?branch=master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a42f61ffc97b4bcbbca184ab838092c8)](https://www.codacy.com/app/cdimascio/uuid-mongodb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cdimascio/uuid-mongodb&amp;utm_campaign=Badge_Grade) ![](https://img.shields.io/npm/v/uuid-mongodb.svg) ![](https://img.shields.io/npm/dm/uuid-mongodb.svg) ![](https://img.shields.io/badge/license-MIT-blue.svg)
+![](https://travis-ci.org/cdimascio/uuid-mongodb.svg?branch=master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a42f61ffc97b4bcbbca184ab838092c8)](https://www.codacy.com/app/cdimascio/uuid-mongodb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cdimascio/uuid-mongodb&amp;utm_campaign=Badge_Grade) ![](https://img.shields.io/npm/v/uuid-mongodb.svg) ![](https://img.shields.io/npm/dm/uuid-mongodb.svg) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+ ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Generates and parses [BSON UUIDs](https://docs.mongodb.com/manual/reference/method/UUID/) for use with MongoDB. BSON UUIDs provide better performance than their string counterparts.
 
@@ -67,10 +66,6 @@ return collection
 
 Currently supports [UUID v1 and v4](https://www.ietf.org/rfc/rfc4122.txt)
 
-## License
-
-[MIT](./LICENSE)
-
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -82,3 +77,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## License
+
+[MIT](./LICENSE)
