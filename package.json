@@ -1,7 +1,7 @@
 {
   "name": "uuid-mongodb",
   "version": "2.0.0",
-  "description": "",
+  "description": "Generates and parses MongoDB BSON UUIDs",
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
