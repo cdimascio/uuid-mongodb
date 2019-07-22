@@ -2,19 +2,20 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const MUUID = require('../lib');
 
-const url = 'mongodb://localhost/my_mongoose';
-mongoose.connect(url, { useNewUrlParser: true });
+// Setup and connect
+mongoose.connect('mongodb://localhost/my_mongoose', { useNewUrlParser: true });
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {});
 
+// Define a simple schema
 const kittySchema = new mongoose.Schema({
   _id: Schema.Types.Mixed,
   name: String,
 });
-
 const Kitten = mongoose.model('Kitten', kittySchema);
 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {});
+// see MUUID example usage below
 
 // 1. Create new kitten with UUID _id
 var silence = new Kitten({ _id: MUUID.v1(), name: 'Silence' });
