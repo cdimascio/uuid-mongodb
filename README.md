@@ -62,7 +62,7 @@ return collection
   });
 ```
 
-### More Examples
+## Complete Examples (with source code)
 
 #### Native Node MongoDB Driver example
 
