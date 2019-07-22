@@ -62,7 +62,7 @@ return collection
   });
 ```
 
-### More Examples
+## Examples (with source code)
 
 #### Native Node MongoDB Driver example
 
@@ -70,7 +70,7 @@ return collection
 
 #### Mongoose example
 
-- [example/ex2-mongoose.js](example/ex1-mongodb.js)
+- [example/ex2-mongoose.js](example/ex2-mongoose.js)
 
 ## Notes
 
