@@ -62,6 +62,16 @@ return collection
   });
 ```
 
+### More Examples
+
+#### Native Node MongoDB Driver example
+
+- [example/ex1-mongodb.js](example/ex1-mongodb.js)
+
+#### Mongoose example
+
+- [example/ex2-mongoose.js](example/ex1-mongodb.js)
+
 ## Notes
 
 Currently supports [UUID v1 and v4](https://www.ietf.org/rfc/rfc4122.txt)
