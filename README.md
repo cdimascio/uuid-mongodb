@@ -70,7 +70,7 @@ return collection
 
 #### Mongoose example
 
-- [example/ex2-mongoose.js](example/ex1-mongodb.js)
+- [example/ex2-mongoose.js](example/ex2-mongoose.js)
 
 ## Notes
 
