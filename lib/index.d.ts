@@ -1,4 +1,4 @@
-import {Binary} from "mongodb";
+import { Binary } from "mongodb";
 
 export type MUUID = Binary;
 
