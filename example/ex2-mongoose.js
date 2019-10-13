@@ -10,7 +10,7 @@ db.once('open', function() {});
 
 // Define a simple schema
 const kittySchema = new mongoose.Schema({
-  _id: Schema.Types.Mixed,
+  _id: Buffer,
   name: String,
 });
 const Kitten = mongoose.model('Kitten', kittySchema);
