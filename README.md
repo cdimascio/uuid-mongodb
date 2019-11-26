@@ -68,20 +68,60 @@ return collection
 
 - [example/ex1-mongodb.js](example/ex1-mongodb.js)
 
+	**snippet:**
+	
+	```javascript
+	const insertResult = await collection.insertOne({
+	  _id: MUUID.v1(),
+	  name: 'carmine',
+	});
+	```
+
 #### Mongoose example
 
 - [example/ex2-mongoose.js](example/ex2-mongoose.js)
 
-```javascript
-const kittySchema = new mongoose.Schema({
-  _id: {
-    type: 'object',
-    value: { type: 'Buffer' },
-    default: () => MUUID.v1(),
-  },
-  title: String,
-});
-```
+	**snippet:**
+	
+	```javascript
+	const kittySchema = new mongoose.Schema({
+	  _id: {
+	    type: 'object',
+	    value: { type: 'Buffer' },
+	    default: () => MUUID.v1(),
+	  },
+	  title: String,
+	});
+	```
+
+- [example/ex3-mongoose.js](example/ex3-mongoose.js)
+
+	**snippet:**
+	
+	```javascript
+	// Define a simple schema
+	const kittySchema = new mongoose.Schema({
+	  _id: {
+	    type: 'object',
+	    value: { type: 'Buffer' },
+	    default: () => MUUID.v1(),
+	  },
+	  title: String,
+	});
+	
+	// no need for auto getter for _id will add a virtual later
+	kittySchema.set('id', false);
+	
+	// virtual getter for custom _id
+	kittySchema
+	  .virtual('id')
+	  .get(function() {
+	    return MUUID.from(this._id).toString();
+	  })
+	  .set(function(val) {
+	    this._id = MUUID.from(val);
+	  });
+	```
 
 ## Notes
 
