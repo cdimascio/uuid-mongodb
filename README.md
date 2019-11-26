@@ -72,6 +72,17 @@ return collection
 
 - [example/ex2-mongoose.js](example/ex2-mongoose.js)
 
+```javascript
+const kittySchema = new mongoose.Schema({
+  _id: {
+    type: 'object',
+    value: { type: 'Buffer' },
+    default: () => MUUID.v1(),
+  },
+  title: String,
+});
+```
+
 ## Notes
 
 Currently supports [UUID v1 and v4](https://www.ietf.org/rfc/rfc4122.txt)
