@@ -1,34 +1,46 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 const MUUID = require('../lib');
 
 // Setup and connect
-mongoose.connect('mongodb://localhost/my_mongoose', { useNewUrlParser: true });
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {});
-
-// Define a simple schema
-const kittySchema = new mongoose.Schema({
-  _id: Schema.Types.Mixed,
-  name: String,
+mongoose.connect('mongodb://localhost/my_mongoose', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
+
+const db = mongoose.connection
+  .on('error', () => console.error('connection error:'))
+  .once('open', () => {});
+
+// 1. Define a simple schema
+const kittySchema = new mongoose.Schema({
+  _id: {
+    type: 'object',
+    value: { type: 'Buffer' },
+    default: () => MUUID.v1(),
+  },
+  title: String,
+});
+
 const Kitten = mongoose.model('Kitten', kittySchema);
 
-// see MUUID example usage below
-
-// 1. Create new kitten with UUID _id
-var silence = new Kitten({ _id: MUUID.v1(), name: 'Silence' });
-
-// 2. Save the new kitten to the database
-silence.save(function(err, kitten) {
-  if (err) return console.error(err);
-  console.log('inserted kitten with id', MUUID.from(kitten._id).toString());
-
-  // 3. Fetch the new kitten from the database
-  Kitten.findOne({ _id: kitten._id }, function(err, kitten) {
-    if (err) return console.error(err);
-    console.log('found kitten    with id', MUUID.from(kitten._id).toString());
-    db.close();
-  });
+// 2. Create new kitten with UUID _id
+var silence = new Kitten({
+  // _id: MUUID.v1(),
+  title: 'Silence',
 });
+
+// 3. Save the new kitten to the database
+silence
+  .save()
+  .then(kitten => {
+    console.log('inserted kitten with id', MUUID.from(kitten._id).toString());
+    return kitten;
+  })
+  .then(kitten => {
+    // 4. Fetch the new kitten from the database
+    Kitten.findOne({ _id: kitten._id }, function(err, kitten) {
+      if (err) return console.error(err);
+      console.log('found kitten    with id', MUUID.from(kitten._id).toString());
+      db.close();
+    });
+  });
