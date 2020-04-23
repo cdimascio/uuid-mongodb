@@ -33,7 +33,7 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
       assert.equal(validate(mUUID.toString()), true);
     });
 
-    it('should accept uuid\'s with capital letters, but return with lowercase', () => {
+    it("should accept uuid's with capital letters, but return with lowercase", () => {
       const mUUID = MUUID.from(uuidv4().toUpperCase());
       assert.equal(hasHexUpperCase(mUUID.toString()), false);
       assert.equal(validate(mUUID.toString()), true);
@@ -46,11 +46,16 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
 
     it('should throw when converting an invalid uuid', () => {
       assert.throws(() => MUUID.from('invalid-uuid'), /Invalid UUID\.$/);
-      assert.throws(() => MUUID.from('802ac0f09b7311e89bb69baebe1aa0bf'), /Invalid UUID\.$/);
+      assert.throws(
+        () => MUUID.from('802ac0f09b7311e89bb69baebe1aa0bf'),
+        /Invalid UUID\.$/
+      );
     });
 
     it('should convert uuid from mongo BSON binary', () => {
-      const mUUID = MUUID.from(Binary(uuidv1(null, Buffer.alloc(16)), Binary.SUBTYPE_UUID));
+      const mUUID = MUUID.from(
+        Binary(uuidv1(null, Buffer.alloc(16)), Binary.SUBTYPE_UUID)
+      );
       assert.equal(mUUID instanceof Binary, true);
       assert.equal(validate(mUUID.toString()), true);
     });
@@ -61,14 +66,68 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
     });
 
     it('should throw when converting an Binary non SUBTYPE_UUID', () => {
-      const binary = new Binary(uuidv1(null, Buffer.alloc(16)), Binary.SUBTYPE_USER_DEFINED);
-      assert.throws(() => MUUID.from(binary), /Unexpected UUID type\. UUID must be a string or a MongoDB Binary \(SUBTYPE_UUID\)\.$/);
+      const binary = new Binary(
+        uuidv1(null, Buffer.alloc(16)),
+        Binary.SUBTYPE_USER_DEFINED
+      );
+      assert.throws(
+        () => MUUID.from(binary),
+        /Unexpected UUID type\. UUID must be a string or a MongoDB Binary \(SUBTYPE_UUID\)\.$/
+      );
+    });
+  });
+
+  describe('formatting', () => {
+    it('should format with default (dashes)', function() {
+      const mUUID = MUUID.v1();
+      assert.equal(validate(mUUID.toString()), true);
+      // ensure generated uuids are always lowercase
+      // as per spec - (see https://www.itu.int/rec/T-REC-X.667-201210-I/en)
+      assert.equal(hasHexUpperCase(mUUID.toString()), false);
+    });
+    it("should format with format 'D' (dashes)", function() {
+      const mUUID = MUUID.v1();
+      const uuid = mUUID.toString('D');
+      assert.equal(validate(uuid, 'D'), true);
+      assert.equal(hasHexUpperCase(mUUID.toString('D')), false);
+    });
+    it("should format with format 'N' no delimiter", function() {
+      const mUUID = MUUID.v1();
+      const uuid = mUUID.toString('N');
+      assert.equal(validate(uuid, 'N'), true);
+      assert.equal(hasHexUpperCase(uuid), false);
+    });
+    it("should format with format 'B' (curly braces)", function() {
+      const mUUID = MUUID.v1();
+      const uuid = mUUID.toString('B');
+      assert.equal(validate(uuid, 'B'), true);
+      assert.equal(hasHexUpperCase(uuid), false);
+    });
+    it("should format with format 'P' (parens)", function() {
+      const mUUID = MUUID.v1();
+      const uuid = mUUID.toString('P');
+      assert.equal(validate(uuid, 'P'), true);
+      assert.equal(hasHexUpperCase(uuid), false);
     });
   });
 });
 
-function validate(uuid) {
-  return !!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.exec(
-    uuid
-  );
+function validate(uuid, format) {
+  if (format === 'N') {
+    return !!/^[0-9a-f]{8}[0-9a-f]{4}[0-9a-f]{4}[0-9a-f]{4}[0-9a-f]{12}$/.exec(
+      uuid
+    );
+  } else if (format === 'B') {
+    return !!/^\{[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\}$/.exec(
+      uuid
+    );
+  } else if (format === 'P') {
+    return !!/^\([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\)$/.exec(
+      uuid
+    );
+  } else {
+    return !!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.exec(
+      uuid
+    );
+  }
 }
