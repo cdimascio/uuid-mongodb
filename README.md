@@ -42,11 +42,12 @@ const mUUID3 = MUUID.from(/** MongoDb Binary of SUBTYPE_UUID */)
 
 UUIDs may be formatted using the following options:
 
-N | 32 digits:00000000000000000000000000000000
--- | --
-D | 32 digits separated by hyphens:00000000-0000-0000-0000-000000000000
-B | 32 digits separated by hyphens, enclosed in braces:{00000000-0000-0000-0000-000000000000}
-P | 32 digits separated by hyphens, enclosed in parentheses:(00000000-0000-0000-0000-000000000000)
+Format | Description | Example
+-- | -- | --
+N | 32 digits | `00000000000000000000000000000000`
+D | 32 digits separated by hyphens | `00000000-0000-0000-0000-000000000000`
+B | 32 digits separated by hyphens, enclosed in braces | `{00000000-0000-0000-0000-000000000000}`
+P | 32 digits separated by hyphens, enclosed in parentheses | `(00000000-0000-0000-0000-000000000000)`
 
 **example:**
 ```javascript
