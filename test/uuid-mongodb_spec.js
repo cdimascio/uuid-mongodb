@@ -4,11 +4,11 @@ const uuidv4 = require('uuid/v4');
 const { Binary } = require('mongodb');
 const MUUID = require('../lib');
 
-const hasHexUpperCase = s => !!/[A-F]/.exec(s);
+const hasHexUpperCase = (s) => !!/[A-F]/.exec(s);
 
-describe('MUUID (accept and generate uuids according to spec - (see https://www.itu.int/rec/T-REC-X.667-201210-I/en)', function() {
+describe('MUUID (accept and generate uuids according to spec - (see https://www.itu.int/rec/T-REC-X.667-201210-I/en)', function () {
   describe('v1()', () => {
-    it('should generate a valid v1 uuid', function() {
+    it('should generate a valid v1 uuid', function () {
       const mUUID = MUUID.v1();
       assert.equal(validate(mUUID.toString()), true);
       // ensure generated uuids are always lowercase
@@ -18,7 +18,7 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
   });
 
   describe('v4()', () => {
-    it('should generate a validate v4 uuid', function() {
+    it('should generate a validate v4 uuid', function () {
       const mUUID = MUUID.v4();
       assert.equal(validate(mUUID.toString()), true);
       // ensure generated uuids are always lowercase
@@ -78,32 +78,32 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
   });
 
   describe('formatting', () => {
-    it('should format with default (dashes)', function() {
+    it('should format with default (dashes)', function () {
       const mUUID = MUUID.v1();
       assert.equal(validate(mUUID.toString()), true);
       // ensure generated uuids are always lowercase
       // as per spec - (see https://www.itu.int/rec/T-REC-X.667-201210-I/en)
       assert.equal(hasHexUpperCase(mUUID.toString()), false);
     });
-    it("should format with format 'D' (dashes)", function() {
+    it("should format with format 'D' (dashes)", function () {
       const mUUID = MUUID.v1();
       const uuid = mUUID.toString('D');
       assert.equal(validate(uuid, 'D'), true);
       assert.equal(hasHexUpperCase(mUUID.toString('D')), false);
     });
-    it("should format with format 'N' no delimiter", function() {
+    it("should format with format 'N' no delimiter", function () {
       const mUUID = MUUID.v1();
       const uuid = mUUID.toString('N');
       assert.equal(validate(uuid, 'N'), true);
       assert.equal(hasHexUpperCase(uuid), false);
     });
-    it("should format with format 'B' (curly braces)", function() {
+    it("should format with format 'B' (curly braces)", function () {
       const mUUID = MUUID.v1();
       const uuid = mUUID.toString('B');
       assert.equal(validate(uuid, 'B'), true);
       assert.equal(hasHexUpperCase(uuid), false);
     });
-    it("should format with format 'P' (parens)", function() {
+    it("should format with format 'P' (parens)", function () {
       const mUUID = MUUID.v1();
       const uuid = mUUID.toString('P');
       assert.equal(validate(uuid, 'P'), true);
