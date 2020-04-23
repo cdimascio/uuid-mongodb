@@ -38,6 +38,25 @@ const mUUID2 = MUUID.from('393967e0-8de1-11e8-9eb6-529269fb1459')
 const mUUID3 = MUUID.from(/** MongoDb Binary of SUBTYPE_UUID */)
 ```
 
+## Formatting
+
+UUIDs may be formatted using the following options:
+
+N | 32 digits:00000000000000000000000000000000
+-- | --
+D | 32 digits separated by hyphens:00000000-0000-0000-0000-000000000000
+B | 32 digits separated by hyphens, enclosed in braces:{00000000-0000-0000-0000-000000000000}
+P | 32 digits separated by hyphens, enclosed in parentheses:(00000000-0000-0000-0000-000000000000)
+
+**example:**
+```javascript
+const mUUID4 = MUUID.v4();
+mUUID1.toString(); // equivalent to `D` separated by hyphens
+mUUID1.toString('P'); // enclosed in parens, separated by hypens
+mUUID1.toString('B'); // enclosed in braces, separated by hyphens
+mUUID1.toString('N'); // 32 digits
+```
+
 ## Examples
 
 **Query using binary UUIDs**
