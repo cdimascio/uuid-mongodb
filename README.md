@@ -38,6 +38,19 @@ const mUUID2 = MUUID.from('393967e0-8de1-11e8-9eb6-529269fb1459')
 const mUUID3 = MUUID.from(/** MongoDb Binary of SUBTYPE_UUID */)
 ```
 
+## Modes
+
+uuid-mongodb offers two modes, **canonical** (default) and **relaxed**.
+
+- **canonical** - A string format that emphasizes type preservation at the expense of readability and interoperability.
+- **relaxed** - A string format that emphasizes readability and interoperability at the expense of type preservation.
+
+Modes are set globally. here is how set the mode
+
+```javascript
+const mUUID = MUUID.mode('relaxed')
+```
+
 ## Formatting
 
 UUIDs may be formatted using the following options:
