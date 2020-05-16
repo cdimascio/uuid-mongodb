@@ -73,11 +73,11 @@ const mUUID = MUUID.mode('relaxed'); // use relaxed mode
 
 Mode _**only**_ impacts how `JSON.stringify(...)` represents a UUID:
 
-For example, depending on the mode, `JSON.stringy(mUUID.v1())` outputs the following:
+e.g. `JSON.stringy(mUUID.v1())` outputs the following:
 
 ```shell
-"DEol4JenEeqVKusA+dzMMA==" // canonical mode
-"1ac34980-97a7-11ea-8bab-b5327b548666" // relaxed mode
+"DEol4JenEeqVKusA+dzMMA==" // when in 'canonical' mode
+"1ac34980-97a7-11ea-8bab-b5327b548666" // when in 'relaxed' mode
 ```
 
 ## Examples
