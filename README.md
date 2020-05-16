@@ -38,6 +38,26 @@ const mUUID2 = MUUID.from('393967e0-8de1-11e8-9eb6-529269fb1459')
 const mUUID3 = MUUID.from(/** MongoDb Binary of SUBTYPE_UUID */)
 ```
 
+## Formatting
+
+UUIDs may be formatted using the following options:
+
+Format | Description | Example
+-- | -- | --
+N | 32 digits | `00000000000000000000000000000000`
+D | 32 digits separated by hyphens | `00000000-0000-0000-0000-000000000000`
+B | 32 digits separated by hyphens, enclosed in braces | `{00000000-0000-0000-0000-000000000000}`
+P | 32 digits separated by hyphens, enclosed in parentheses | `(00000000-0000-0000-0000-000000000000)`
+
+**example:**
+```javascript
+const mUUID4 = MUUID.v4();
+mUUID1.toString(); // equivalent to `D` separated by hyphens
+mUUID1.toString('P'); // enclosed in parens, separated by hypens
+mUUID1.toString('B'); // enclosed in braces, separated by hyphens
+mUUID1.toString('N'); // 32 digits
+```
+
 ## Modes
 
 uuid-mongodb offers two modes, **canonical** (default) and **relaxed**.
@@ -58,26 +78,6 @@ e.g. `JSON.stringy(mUUID.v1())` outputs the following:
 ```shell
 "DEol4JenEeqVKusA+dzMMA==" // canonical mode
 "1ac34980-97a7-11ea-8bab-b5327b548666" // relaxed mode
-```
-
-## Formatting
-
-UUIDs may be formatted using the following options:
-
-Format | Description | Example
--- | -- | --
-N | 32 digits | `00000000000000000000000000000000`
-D | 32 digits separated by hyphens | `00000000-0000-0000-0000-000000000000`
-B | 32 digits separated by hyphens, enclosed in braces | `{00000000-0000-0000-0000-000000000000}`
-P | 32 digits separated by hyphens, enclosed in parentheses | `(00000000-0000-0000-0000-000000000000)`
-
-**example:**
-```javascript
-const mUUID4 = MUUID.v4();
-mUUID1.toString(); // equivalent to `D` separated by hyphens
-mUUID1.toString('P'); // enclosed in parens, separated by hypens
-mUUID1.toString('B'); // enclosed in braces, separated by hyphens
-mUUID1.toString('N'); // 32 digits
 ```
 
 ## Examples
