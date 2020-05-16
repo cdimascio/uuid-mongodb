@@ -48,7 +48,7 @@ uuid-mongodb offers two modes, **canonical** (default) and **relaxed**.
 Modes are set globally. here is how set the mode
 
 ```javascript
-const mUUID = MUUID.mode('relaxed')
+const mUUID = MUUID.mode('relaxed'); // use relaxed mode
 ```
 
 ## Formatting
