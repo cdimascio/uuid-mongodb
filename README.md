@@ -45,7 +45,7 @@ uuid-mongodb offers two modes, **canonical** (default) and **relaxed**.
 - **canonical** - A string format that emphasizes type preservation at the expense of readability and interoperability.
 - **relaxed** - A string format that emphasizes readability and interoperability at the expense of type preservation.
 
-Modes are set globally. here is how set the mode
+The mode is set **globally**. Here is how to set it:
 
 ```javascript
 const mUUID = MUUID.mode('relaxed'); // use relaxed mode
