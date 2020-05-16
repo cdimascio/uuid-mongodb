@@ -1,6 +1,6 @@
 const assert = require('assert');
-const uuidv1 = require('uuid/v1');
-const uuidv4 = require('uuid/v4');
+const { v1: uuidv1 } = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 const { Binary } = require('mongodb');
 const MUUID = require('../lib');
 
@@ -110,6 +110,22 @@ describe('MUUID (accept and generate uuids according to spec - (see https://www.
       assert.equal(hasHexUpperCase(uuid), false);
     });
   });
+
+  describe('modes', () => {
+    it('relaxed mode should print friendly uuid in hex', function () {
+      const mUUID = MUUID.mode('relaxed').v1();
+      assert.equal(isBase64(JSON.stringify(mUUID)), false);
+      assert.equal(validate(mUUID.toString()), true);
+      assert.equal(hasHexUpperCase(mUUID.toString()), false);
+    });
+    it('canonical mode should print base64 uuid ', function () {
+      const mUUID = MUUID.mode('canonical').v1();
+      const c = JSON.parse(JSON.stringify(mUUID));
+      assert.equal(isBase64(c), true);
+      assert.equal(validate(mUUID.toString()), true);
+      assert.equal(hasHexUpperCase(mUUID.toString()), false);
+    });
+  });
 });
 
 function validate(uuid, format) {
@@ -130,4 +146,10 @@ function validate(uuid, format) {
       uuid
     );
   }
+}
+
+function isBase64(s) {
+  const bc = /[A-Za-z0-9+/=]/.test(s);
+  const lc = /.*=$/.test(s); // make sure it ends with '='
+  return bc && lc;
 }
