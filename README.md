@@ -51,6 +51,15 @@ The mode is set **globally**. Here is how to set it:
 const mUUID = MUUID.mode('relaxed'); // use relaxed mode
 ```
 
+Currently, mode _**only**_ impacts how `JSON.stringify(mUUID)` represents a UUID:
+
+e.g. `JSON.stringy(mUUID.v1())` outputs the following:
+
+```shell
+"DEol4JenEeqVKusA+dzMMA==" // canonical mode
+"1ac34980-97a7-11ea-8bab-b5327b548666" // relaxed mode
+```
+
 ## Formatting
 
 UUIDs may be formatted using the following options:
