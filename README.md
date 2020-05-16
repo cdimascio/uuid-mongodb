@@ -60,20 +60,20 @@ mUUID1.toString('N'); // 32 digits
 
 ## Modes
 
-uuid-mongodb offers two modes, **canonical** (default) and **relaxed**.
+uuid-mongodb offers two modes:
 
-- **canonical** - A string format that emphasizes type preservation at the expense of readability and interoperability.
+- **canonical** (default) - A string format that emphasizes type preservation at the expense of readability and interoperability.
 - **relaxed** - A string format that emphasizes readability and interoperability at the expense of type preservation.
 
-The mode is set **globally**. Here is how to set it:
+The mode is set **globally** as such:
 
 ```javascript
 const mUUID = MUUID.mode('relaxed'); // use relaxed mode
 ```
 
-Currently, mode _**only**_ impacts how `JSON.stringify(mUUID)` represents a UUID:
+Mode _**only**_ impacts how `JSON.stringify(...)` represents a UUID:
 
-e.g. `JSON.stringy(mUUID.v1())` outputs the following:
+For example, `JSON.stringy(mUUID.v1())` outputs the following:
 
 ```shell
 "DEol4JenEeqVKusA+dzMMA==" // canonical mode
