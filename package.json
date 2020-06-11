@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/cdimascio/uuid-mongodb#readme",
   "dependencies": {
-    "uuid": "^8.0.0"
+    "uuid": "^8.1.0"
   },
   "peerDependencies": {
     "mongodb": "^3.5.7"
