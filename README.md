@@ -165,6 +165,18 @@ return collection
 	  });
 	```
 
+- [example/ex4-mongoose.js](example/ex4-mongoose.js)
+
+```javascript
+    const uuid = MUUID.v4();
+
+    // save record and wait for it to commit
+    await new Data({ uuid }).save();
+
+    // retrieve the record
+    const result = await Data.findOne({ uuid });
+```
+
 ## Notes
 
 Currently supports [UUID v1 and v4](https://www.ietf.org/rfc/rfc4122.txt)
