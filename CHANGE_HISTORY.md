@@ -1,3 +1,10 @@
+## <small>2.4.2 (2021-02-15)</small>
+
+* chore: increment patch version ([f7a8d0b](https://github.com/cdimascio/uuid-mongodb/commit/f7a8d0b))
+* updated typescript definition to include formatted toString ([3022cd1](https://github.com/cdimascio/uuid-mongodb/commit/3022cd1))
+
+
+
 ## <small>2.4.1 (2020-12-25)</small>
 
 * feat: improved type declarations ([ee26ce5](https://github.com/cdimascio/uuid-mongodb/commit/ee26ce5))
