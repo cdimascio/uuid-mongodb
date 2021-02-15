@@ -6,7 +6,8 @@ const MUUID = require('../lib');
 
 const hasHexUpperCase = (s) => !!/[A-F]/.exec(s);
 
-describe('MUUID (accept and generate uuids according to spec - (see https://www.itu.int/rec/T-REC-X.667-201210-I/en)', function () {
+// accept and generate uuids according to spec - (see https://www.itu.int/rec/T-REC-X.667-201210-I/en)
+describe('MUUID', function () {
   describe('v1()', () => {
     it('should generate a valid v1 uuid', function () {
       const mUUID = MUUID.v1();
