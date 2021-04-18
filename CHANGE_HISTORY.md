@@ -1,3 +1,14 @@
+## <small>2.4.3 (2021-04-18)</small>
+
+* fix: example/package.json & example/package-lock.json to reduce vulnerabilities ([b54f92b](https://github.com/cdimascio/uuid-mongodb/commit/b54f92b))
+* fix: upgrade mongoose from 5.11.8 to 5.11.9 ([5ae3ad0](https://github.com/cdimascio/uuid-mongodb/commit/5ae3ad0))
+* chore(deps): bump y18n from 4.0.0 to 4.0.1 ([83dec56](https://github.com/cdimascio/uuid-mongodb/commit/83dec56))
+* allow 4.x betas ([fffcea9](https://github.com/cdimascio/uuid-mongodb/commit/fffcea9))
+* missing new operator added ([b9a313f](https://github.com/cdimascio/uuid-mongodb/commit/b9a313f))
+* Update uuid-mongodb_spec.js ([fcbab01](https://github.com/cdimascio/uuid-mongodb/commit/fcbab01))
+
+
+
 ## <small>2.4.2 (2021-02-15)</small>
 
 * chore: increment patch version ([f7a8d0b](https://github.com/cdimascio/uuid-mongodb/commit/f7a8d0b))

@@ -1,6 +1,6 @@
 {
   "name": "uuid-mongodb",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "Generates and parses MongoDB BSON UUIDs. Plays nicely with others including the MongoDB native driver and Mongoose.",
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
