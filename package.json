@@ -27,14 +27,13 @@
     "uuid": "^8.3.2"
   },
   "peerDependencies": {
-    "mongodb": "^3.6.9"
+    "mongodb": "3.6.x || 4.0.x || 4.1.x"
   },
   "devDependencies": {
-    "eslint": "^7.27.0",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "mocha": "^8.4.0",
-    "mongodb": "^3.6.3",
-    "prettier": "^2.3.0"
+    "prettier": "^2.3.2"
   }
 }
