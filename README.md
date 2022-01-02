@@ -108,7 +108,7 @@ return collection
 
 #### Native Node MongoDB Driver example
 
-- [example/ex1-mongodb.js](example/ex1-mongodb.js)
+- [examples/ex1-mongodb.js](examples/ex1-mongodb.js)
 
 	**snippet:**
 	
@@ -121,7 +121,7 @@ return collection
 
 #### Mongoose example
 
-- [example/ex2-mongoose.js](example/ex2-mongoose.js)
+- [examples/ex2-mongoose.js](examples/ex2-mongoose.js)
 
 	**snippet:**
 	
@@ -136,7 +136,7 @@ return collection
 	});
 	```
 
-- [example/ex3-mongoose.js](example/ex3-mongoose.js)
+- [examples/ex3-mongoose.js](examples/ex3-mongoose.js)
 
 	**snippet:**
 	
@@ -165,7 +165,7 @@ return collection
 	  });
 	```
 
-- [example/ex4-mongoose.js](example/ex4-mongoose.js)
+- [examples/ex4-mongoose.js](examples/ex4-mongoose.js)
 
 ```javascript
     const uuid = MUUID.v4();
