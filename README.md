@@ -18,10 +18,10 @@ Please see https://github.com/cdimascio/uuid-mongodb for usage notes.
 
 ## Authors or Acknowledgments
 
-* [Carmine DiMascio](https://github.com/cdimascio)
-* [Benjamin Dobell](https://glassechidna.com.au/)
-* [David Pfeffer](https://github.com/bytenik)
-* [Erich Kuba](https://github.com/erichkuba)
+*   [Carmine DiMascio](https://github.com/cdimascio)
+*   [Benjamin Dobell](https://glassechidna.com.au/)
+*   [David Pfeffer](https://github.com/bytenik)
+*   [Erich Kuba](https://github.com/erichkuba)
 
 ## License
 

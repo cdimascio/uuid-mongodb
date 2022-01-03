@@ -33,12 +33,12 @@ var silence = new Kitten({
 silence
   .save()
   // 4. Fetch the new kitten from the database
-  .then(kitten => {
+  .then((kitten) => {
     console.log('inserted kitten with id', MUUID.from(kitten._id).toString());
     return Kitten.findOne({ _id: kitten._id });
   })
-  .then(kitten =>
+  .then((kitten) =>
     console.log('found kitten with id', MUUID.from(kitten._id).toString())
   )
-  .catch(e => console.error(e))
+  .catch((e) => console.error(e))
   .finally(() => db.close());
