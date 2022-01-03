@@ -16,13 +16,13 @@ MongoClient.connect(url, { useNewUrlParser: true }, async (err, client) => {
     const collection = await db.createCollection(collectionName);
 
     // *****
-    // 1. insert a record with a v1 uuid 
+    // 1. insert a record with a v1 uuid
     const insertResult = await collection.insertOne({
       _id: MUUID.v1(),
       name: 'carmine',
     });
 
-    // retrieve the newly inserted document's UUID 
+    // retrieve the newly inserted document's UUID
     // and print it as a human readable string
     const insertedId = MUUID.from(insertResult.insertedId).toString();
     console.log(`insertOne with id ${insertedId} succeeded`);
