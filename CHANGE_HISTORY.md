@@ -1,3 +1,9 @@
+## 2.5.0 (2022-01-02)
+
+* support all mongodb peer versions ([197e9a3](https://github.com/cdimascio/uuid-mongodb/commit/197e9a3))
+
+
+
 ## <small>2.4.3 (2021-04-18)</small>
 
 * fix: example/package.json & example/package-lock.json to reduce vulnerabilities ([b54f92b](https://github.com/cdimascio/uuid-mongodb/commit/b54f92b))
