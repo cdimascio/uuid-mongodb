@@ -5,6 +5,16 @@
     "node": true,
     "es6": true
   },
+  "overrides": [
+    {
+      "files": [
+        "**/*spec.js"
+      ],
+      "env": {
+        "mocha": true
+      }
+    }
+  ],
   "rules": {
     "prettier/prettier": "error"
   }
