@@ -27,7 +27,7 @@
     "uuid": "^8.3.2"
   },
   "peerDependencies": {
-    "mongodb": "3.6.x || 4.0.x || 4.1.x || 4.2.x"
+    "mongodb": "3.6.x || 4.0.x || 4.1.x || 4.2.x || 4.3.x"
   },
   "devDependencies": {
     "eslint": "^8.5.0",
