@@ -1,6 +1,6 @@
 {
   "name": "@apigames/uuid-mongodb",
-  "version": "22.1.0-dev.5",
+  "version": "22.1.0-dev.6",
   "description": "Generates and parses MongoDB BSON UUIDs. Plays nicely with others including the MongoDB native driver and Mongoose.",
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
@@ -33,7 +33,7 @@
     "uuid": "^8.3.2"
   },
   "peerDependencies": {
-    "mongodb": "3.6.x || 4.0.x || 4.1.x || 4.2.x"
+    "mongodb": "3.6.x || 4.0.x || 4.1.x || 4.2.x || 4.3.x"
   },
   "devDependencies": {
     "eslint": "^8.6.0",
