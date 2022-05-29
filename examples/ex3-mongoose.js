@@ -28,10 +28,10 @@ kittySchema.set('id', false);
 // virtual getter for custom _id
 kittySchema
   .virtual('id')
-  .get(function() {
+  .get(function () {
     return MUUID.from(this._id).toString();
   })
-  .set(function(val) {
+  .set(function (val) {
     this._id = MUUID.from(val);
   });
 
@@ -45,11 +45,11 @@ var silence = new Kitten({
 // 3. Save the new kitten to the database
 silence
   .save()
-  .then(kitten => {
+  .then((kitten) => {
     log('inserted kitten with id', kitten.id);
     return kitten._id;
   })
-  .then(_id => Kitten.findOne({ _id }))
-  .then(kitten => log('found kitten with id', kitten.id))
-  .catch(e => log(e))
+  .then((_id) => Kitten.findOne({ _id }))
+  .then((kitten) => log('found kitten with id', kitten.id))
+  .catch((e) => log(e))
   .finally(() => db.close());

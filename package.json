@@ -1,13 +1,19 @@
 {
-  "name": "uuid-mongodb",
-  "version": "2.5.1",
+  "name": "@apigames/uuid-mongodb",
+  "version": "22.1.5",
   "description": "Generates and parses MongoDB BSON UUIDs. Plays nicely with others including the MongoDB native driver and Mongoose.",
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
     "test": "mocha test/**/*.js ",
     "lint": "eslint lib/**/*.js",
-    "lint:fix": "eslint --fix lib/**/*.js"
+    "lint:fix": "eslint --fix lib/**/*.js",
+    "win:publish": "mocha test/**/*.js && npm publish",
+    "unx:publish": "mocha test/**/*.js && npm publish",
+    "win:publish-beta": "mocha test/**/*.js && npm publish --tag beta",
+    "unx:publish-beta": "mocha test/**/*.js && npm publish --tag beta",
+    "win:publish-dev": "mocha test/**/*.js && npm publish --tag dev",
+    "unx:publish-dev": "mocha test/**/*.js && npm publish --tag dev"
   },
   "repository": {
     "type": "git",
