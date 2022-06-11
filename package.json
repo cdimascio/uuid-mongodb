@@ -27,10 +27,10 @@
     "uuid": "^8.3.2"
   },
   "peerDependencies": {
-    "mongodb": "3.6.x || 3.7.x || 4.0.x || 4.1.x || 4.2.x || 4.3.x || 4.4.x || 4.5.x || 4.6.x"
+    "mongodb": "3.6.x || 3.7.x || 4.0.x || 4.1.x || 4.2.x || 4.3.x || 4.4.x || 4.5.x || 4.6.x || 4.7.x"
   },
   "devDependencies": {
-    "eslint": "^8.16.0",
+    "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "mocha": "^9.2.2",
