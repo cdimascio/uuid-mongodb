@@ -1,3 +1,14 @@
+## <small>2.5.2 (2022-12-14)</small>
+
+* Added support for the mongodb 4.7.x driver in peer dependencies. ([7cfcef2](https://github.com/cdimascio/uuid-mongodb/commit/7cfcef2))
+* Added support for the mongodb 4.8.x driver in peer dependencies and updated dependencies to the late ([715139b](https://github.com/cdimascio/uuid-mongodb/commit/715139b))
+* Added support for the MongoDB 4.9 driver. Updated other devDependencies to the latest versions. All  ([8a8f5a4](https://github.com/cdimascio/uuid-mongodb/commit/8a8f5a4))
+* Updated dependencies. Added support for the mongodb v4.6.x as a peer dependency. Remove the dev depe ([ca726b1](https://github.com/cdimascio/uuid-mongodb/commit/ca726b1))
+* Updated to uuid version 9.0.0; Updated MongoDB peer dependencies to cover al versions through to V4. ([60399ce](https://github.com/cdimascio/uuid-mongodb/commit/60399ce))
+* v2.5.2 ([666e5b9](https://github.com/cdimascio/uuid-mongodb/commit/666e5b9))
+
+
+
 ## 2.5.0 (2022-01-02)
 
 * support all mongodb peer versions ([197e9a3](https://github.com/cdimascio/uuid-mongodb/commit/197e9a3))
