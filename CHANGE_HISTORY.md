@@ -1,3 +1,10 @@
+## <small>2.5.3 (2022-12-27)</small>
+
+* add examples to .npmignore ([8e9cda2](https://github.com/cdimascio/uuid-mongodb/commit/8e9cda2))
+* add support all mongo 4.x peers ([ca054d9](https://github.com/cdimascio/uuid-mongodb/commit/ca054d9))
+* Updated dependencies (including the mongodb v4.13.x peer dependency). ([acaa71a](https://github.com/cdimascio/uuid-mongodb/commit/acaa71a))
+* Updated the mongodb peer dependency to accept all 4.x versions due to the increased release cadence  ([c490436](https://github.com/cdimascio/uuid-mongodb/commit/c490436))
+
 ## <small>2.5.2 (2022-12-14)</small>
 
 * Added support for the mongodb 4.7.x driver in peer dependencies. ([7cfcef2](https://github.com/cdimascio/uuid-mongodb/commit/7cfcef2))
@@ -47,6 +54,9 @@
 * Exported type for mode ([d2489a4](https://github.com/cdimascio/uuid-mongodb/commit/d2489a4))
 * update deps ([781fb82](https://github.com/cdimascio/uuid-mongodb/commit/781fb82))
 * fix: upgrade mongodb from 3.6.2 to 3.6.3 ([8093b03](https://github.com/cdimascio/uuid-mongodb/commit/8093b03))
+
+
+
 
 
 
