@@ -10,7 +10,7 @@ export interface MUUID extends Binary {
    *  "B" for 32 digits separated by hyphens, enclosed in braces, e.g. {00000000-0000-0000-0000-000000000000}; or
    *  "P" for 32 digits separated by hyphens, enclosed in parentheses, e.g. (00000000-0000-0000-0000-000000000000)
    */
-  toString(format?: "utf8" | "utf-8" | "base64" | "hex"): string;
+  toString(format?: 'utf8' | 'utf-8' | 'base64' | 'hex'): string;
   toString(format?: UUIDFormat): string;
 }
 export type Mode = {
