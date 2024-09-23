@@ -1,6 +1,6 @@
 {
   "name": "uuid-mongodb",
-  "version": "2.5.5",
+  "version": "2.6.0",
   "description": "Generates and parses MongoDB BSON UUIDs. Plays nicely with others including the MongoDB native driver and Mongoose.",
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
@@ -23,18 +23,15 @@
     "url": "https://github.com/cdimascio/uuid-mongodb/issues"
   },
   "homepage": "https://github.com/cdimascio/uuid-mongodb#readme",
-  "dependencies": {
-    "uuid": "^9.0.1"
-  },
-  "peerDependencies": {
-    "mongodb": "3.6.x || 3.7.x || 4.x || 5.x || 6.x"
-  },
   "devDependencies": {
     "eslint": "8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "mocha": "^10.2.0",
-    "mongodb": "6.3.0",
-    "prettier": "^2.8.7"
+    "mongodb": "^6.9.0",
+    "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "uuid": "^10.0.0"
   }
 }
