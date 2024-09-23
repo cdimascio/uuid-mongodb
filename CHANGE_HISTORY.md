@@ -1,3 +1,25 @@
+##  (2024-09-23)
+
+* upgrades uuid ([bff772f](https://github.com/cdimascio/uuid-mongodb/commit/bff772f))
+* v2.5.5 ([413b449](https://github.com/cdimascio/uuid-mongodb/commit/413b449))
+* fix: upgrade mongodb from 6.0.0 to 6.3.0 ([eb9c84c](https://github.com/cdimascio/uuid-mongodb/commit/eb9c84c))
+
+
+
+##  (2024-09-23)
+
+* v2.5.5 ([413b449](https://github.com/cdimascio/uuid-mongodb/commit/413b449))
+* fix: upgrade mongodb from 6.0.0 to 6.3.0 ([eb9c84c](https://github.com/cdimascio/uuid-mongodb/commit/eb9c84c))
+
+
+
+##  (2024-09-23)
+
+* v2.5.5 ([413b449](https://github.com/cdimascio/uuid-mongodb/commit/413b449))
+* fix: upgrade mongodb from 6.0.0 to 6.3.0 ([eb9c84c](https://github.com/cdimascio/uuid-mongodb/commit/eb9c84c))
+
+
+
 ## <small>2.5.5 (2024-01-28)</small>
 
 * Add support for mongodb@6.x ([9859389](https://github.com/cdimascio/uuid-mongodb/commit/9859389))
